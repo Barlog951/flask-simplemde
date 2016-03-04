@@ -22,8 +22,23 @@ JS_LOAD = """<script>
 var simplemde = new SimpleMDE();
 </script>
 """
+
+JS_LOAD_IIFE = """<script>
+(function () {
+  var simplemde = new SimpleMDE();
+})();
+</script>
+"""
+
 JS_LOAD_WITH_ID = """<script>
 var simplemde = new SimpleMDE({ element: document.getElementById("%s") });
+</script>
+"""
+
+JS_LOAD_WITH_ID_IIFE = """<script>
+(function () {
+    var simplemde = new SimpleMDE({ element: document.getElementById("%s") });
+})();
 </script>
 """
 
@@ -48,6 +63,7 @@ class SimpleMDE(object):
         :param app:
             Flask application instance
         """
+        app.config.setdefault('SIMPLEMDE_JS_IIFE', True)
         app.config.setdefault('SIMPLEMDE_USE_CDN', True)
 
         simplemde = Blueprint(
@@ -87,8 +103,16 @@ class SimpleMDE(object):
     @property
     def load(self):
         """property that will be rendered as javascript loading code"""
-        return Markup(JS_LOAD)
+        if current_app.config['SIMPLEMDE_JS_IIFE']:
+            code = JS_LOAD_IIFE
+        else:
+            code = JS_LOAD
+        return Markup(code)
 
     def load_id(self, id):
         """method that renders javascript loading code for specific id"""
-        return Markup(JS_LOAD_WITH_ID % id)
+        if current_app.config['SIMPLEMDE_JS_IIFE']:
+            code = JS_LOAD_WITH_ID_IIFE
+        else:
+            code = JS_LOAD_WITH_ID
+        return Markup(code % id)

@@ -29,6 +29,7 @@ Quick Start
     from flask.ext.simplemde import SimpleMDE
 
     app = Flask(__name__)
+    app.config['SIMPLEMDE_JS_IIFE'] = True
     app.config['SIMPLEMDE_USE_CDN'] = True
     SimpleMDE(app)
 

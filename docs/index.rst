@@ -7,11 +7,16 @@ Configuration
 ========================= =====================================================
 Option                    Description
 ========================= =====================================================
+:code:`SIMPLEMDE_JS_IIFE` If :code:`True`, the SimpleMDE loading javascript
+                          will be in `IIFE`_ style.  If :code:`False`, a
+                          simpler declaration will be used
 :code:`SIMPLEMDE_USE_CDN` If :code:`True`, SimpleMDE's css and javascript files
-                          will be served from CDN. If :code:`False`, local
+                          will be served from CDN.  If :code:`False`, local
                           copies of these files will be served.  Default value
                           is :code:`True`
 ========================= =====================================================
+
+.. _IIFE: https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
 
 
 SimpleMDE Version

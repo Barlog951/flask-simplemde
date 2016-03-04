@@ -5,6 +5,9 @@ from flask.ext.simplemde import SimpleMDE
 
 app = Flask(__name__)
 
+# Using IIFE style javascript code, this is the default value
+app.config['SIMPLEMDE_JS_IIFE'] = True
+
 # Using external CDN links, this is the default value
 app.config['SIMPLEMDE_USE_CDN'] = True
 
