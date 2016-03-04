@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flask-SimpleMDE example</title>
+    {{ simplemde.css }}
+    {{ simplemde.js }}
+  </head>
+  <body>
+    <textarea># Flask-SimpleMDE Demo
+
+[Flask-SimpleMDE](https://pypi.python.org/pypi/Flask-SimpleMDE) integrates
+[SimpleMDE Markdown Editor](https://simplemde.com/) into your flask application
+
+With
+
+    {{ '{{' }} simplemde.css }}
+    {{ '{{' }} simplemde.js }}
+
+inside `&lt;head&gt;` tag and
+
+    {{ '{{' }} simplemde.load }}
+
+at the end of `&lt;body&gt;` tag,
+
+the first `&lt;textarea&gt;` tag in the document will be turned into SimpleMDE
+Markdown Editor, just like this
+    </textarea>
+    <textarea>Normal &lt;textarea&gt;</textarea>
+    <textarea id="third">
+This  `&lt;textarea&gt;` with `id="third"` will be a SimpleMDE Markdown Editor
+as well, it's been activated with:
+
+    {{ '{{' }} simplemde.load_id("third") }}
+
+    </textarea>
+    {{ simplemde.load }}
+    {{ simplemde.load_id("third") }}
+  </body>
+</html>
