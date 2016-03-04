@@ -36,6 +36,13 @@ Changelog
 =========
 
 
+Version 0.2
+-----------
+
+- SimpleMDE loading javascript is in IIFE style by default
+- Added option to turn off the IIFE style
+
+
 Version 0.1
 -----------
 
