@@ -5,7 +5,7 @@
 
 from flask import Blueprint, Markup, current_app, url_for
 
-__version__ = '0.3.0'
+__version__ = '0.3.1.dev0'
 __all__ = ['SimpleMDE']
 
 CDN_PREFIX = '//cdn.jsdelivr.net/simplemde/latest/'
