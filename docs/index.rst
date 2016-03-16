@@ -22,7 +22,7 @@ Option                    Description
 SimpleMDE Version
 =================
 
-The bundled version of SimpleMDE is v1.10.0
+The bundled version of SimpleMDE is v1.10.1
 
 
 API
@@ -34,6 +34,12 @@ API
 
 Changelog
 =========
+
+
+Version 0.3.0
+-------------
+
+- Upgraded bundled SimpleMDE version to 1.10.1
 
 
 Version 0.2
