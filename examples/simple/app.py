@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template
-from flask.ext.simplemde import SimpleMDE
+from flask_simplemde import SimpleMDE
 
 app = Flask(__name__)
 

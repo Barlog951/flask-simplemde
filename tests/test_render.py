@@ -1,6 +1,6 @@
 import flask
 
-from flask.ext.simplemde import SimpleMDE
+from flask_simplemde import SimpleMDE
 
 TEMPLATE = """
 <!DOCTYPE html>

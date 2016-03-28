@@ -26,7 +26,7 @@ Quick Start
   .. code-block:: python
 
     from flask import Flask, render_template
-    from flask.ext.simplemde import SimpleMDE
+    from flask_simplemde import SimpleMDE
 
     app = Flask(__name__)
     app.config['SIMPLEMDE_JS_IIFE'] = True
